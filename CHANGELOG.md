@@ -1,5 +1,15 @@
 # @martian-engineering/lossless-claw
 
+## 1.0.1
+
+### Patch Changes
+
+- [#1145](https://github.com/Martian-Engineering/lossless-claw/pull/1145) [`c6d06e5`](https://github.com/Martian-Engineering/lossless-claw/commit/c6d06e528867004c85ae84897019d94f0cdbea50) Thanks [@jalehman](https://github.com/jalehman)! - Accept the retired `transcriptGcEnabled` and `autoRotateSessionFiles` settings so upgrades from 0.15 continue to load. Lossless ignores both settings and logs a startup warning that asks operators to remove them.
+
+- [#1155](https://github.com/Martian-Engineering/lossless-claw/pull/1155) [`188b235`](https://github.com/Martian-Engineering/lossless-claw/commit/188b235e46839893ef52a4915ba0e98206b94ff9) Thanks [@FtlC-ian](https://github.com/FtlC-ian)! - Avoid scanning unrelated message history when resolving summary source ranges. This prevents repeated synchronous database scans from stalling context assembly on large databases while preserving summary coverage and generated context.
+
+- [#1162](https://github.com/Martian-Engineering/lossless-claw/pull/1162) [`a3eedf5`](https://github.com/Martian-Engineering/lossless-claw/commit/a3eedf5c94ea838fa0a1eeb28bb2388eb450de78) Thanks [@Marvinthebored](https://github.com/Marvinthebored)! - Verify structured tool provenance and payloads before adopting transcript anchors or deduplicating replays. Treat blank-text and ambiguous weak matches as unproven, and stop re-verifying mismatched legacy tool anchors. Preserve all message content when continuity is uncertain.
+
 ## 1.0.0
 
 <!-- release-rollback-version: 0.15.6 -->
